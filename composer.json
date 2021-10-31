@@ -3,7 +3,8 @@
   "description": "php trinodb client",
   "minimum-stability": "stable",
   "keywords": [
-    "prestodb", "trinodb"
+    "prestodb",
+    "trinodb"
   ],
   "license": "MIT",
   "authors": [
@@ -35,9 +36,17 @@
       "Ytake\\TrinoClient\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
   "scripts": {
     "ci": [
       "./vendor/bin/phpunit"
+    ],
+    "sa": [
+      "./vendor/bin/phpstan analyse -c phpstan.neon"
     ]
   }
 }
